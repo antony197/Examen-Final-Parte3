@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from miapp.models import Producto
+from miapp.models import Curso
 
 # Create your views here.
 def saludo(request):
@@ -29,7 +30,16 @@ def crear_productos(request):
         {'producto' : producto})
 
 def crear_curso(request):
-    return render(request, 'Crearcursos.html')
+    curso = Curso(
+    codigo = "IS04R7",
+    nombre = "Estructuras Discretas",
+    horas = "5",
+    creditos = "4",
+    estado = "A",
+    )
+    curso.save()
+    return render(request, 'Crearcursos.html',
+        {'curso' : curso})
 
 	
 

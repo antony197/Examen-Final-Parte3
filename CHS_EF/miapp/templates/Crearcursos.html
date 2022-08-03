@@ -1,1 +1,7 @@
 {% extends 'layout.html' %}
+{% block content  %}
+    <h1>Cursos Registrados</h1>
+    <br> <b>Curso: </b> {{curso.codigo}} <br> <b>Nombre:</b> {{curso.nombre}}
+    <br> <b>Horas:</b> {{curso.horas}} <br> <b>Creditos:</b> {{curso.creditos}}
+    <br> <b>Fecha_de_registro:</b> {{curso.fecha_registro}} <br> <b>Estado:</b> {{curso.estado}}
+{% endblock content %}
