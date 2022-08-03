@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}EXAMEN FINAL{% endblock %} 
+    </title>
+    {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}" />
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'image/untels.png' %}" >
+            <h1><b>EXAMEN FINAL</b></h1>
+        </div>
+    </header>
+    <nav>
+        <ul><li><a href="{% url 'saludo' %}"> Inicio</a></li>
+            <li><a href="{% url 'alumnos' %}"> Integrantes </a></li>
+            <li><a href="{% url 'crear-productos' %}"> Crear Productos </a></li>
+            <li><a href="{% url 'crear-curso' %}"> Crear Cursos </a></li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+        <div class="box">{% block content %}{% endblock %}</div>
+    </div>
+    <footer>
+        <img src="{% static 'image/untels.png' %}" width = "5%" ><br>
+        <h2> UNTELS - Lenguaje de Programación III &COPY; Huancas-Ccaccya-Serna- {% now "d/m/Y h:m:s " %} </h2>
+    </footer>
+</body>
+</html>
