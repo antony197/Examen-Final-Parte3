@@ -1,1 +1,8 @@
 {% extends 'layout.html' %}
+
+{% block content%}
+    <h1>Producto Registrado</1>
+    <br> <b>Codigo:</b> {{producto.codigo}} <br> <b>nombre:</b> {{producto.nombre}} <br> <b>Precio Compra:</b> {{producto.precio_compra}}
+    <br> <b>Precio Venta:</b> {{producto.precio_venta}} <br> <b>Fecha Compra:</b> {{producto.Fecha_compra}} <br> <b>Fecha Registro:</b> {{producto.Fecha_registro }}
+    <br><b>Estado:</b>{{producto.estado}}
+{% endblock content%}
